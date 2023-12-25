@@ -1,3 +1,10 @@
 p{
   color: red;
 }
+div{
+  border-left: 50px;
+  border-radius: 20px;
+}
+input{
+  border: 70px;
+}
