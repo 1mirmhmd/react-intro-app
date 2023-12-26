@@ -1,5 +1,7 @@
 import React, { useEffect, useState, } from 'react';
 import './App.css';
+import Navbar from './Navbar.jsx'
+import ProductCard from './ProductCard.jsx';
 
 // JSX - Javascript ile html'in birleştirildiği yapı
 // HTML'de keyword'u değiştirme
@@ -63,6 +65,11 @@ export default function App() { //App() gibi görünümlere component denir.
     // İki etiketi peşpeşe kullanamayız, Etiketler tek element altında olmalı. 
     // Bu durumu bypass etmek için React.Fragment veya boş etiket <> </> açılıp kapatılır.
     <React.Fragment>
+      {/* Component'ler iki şekilde de kullanılabilir  Fakat Componenet içerisinde başka etiketler olursa self closing component kullanılamaz */}
+      <Navbar name = "Aziz">
+        <div>Merhaba</div>
+      </Navbar>
+      {/* <Navbar/> */}
       <div>
         <p>
           {total}
@@ -95,6 +102,7 @@ export default function App() { //App() gibi görünümlere component denir.
         </ul>
 
       </div>
+      <ProductCard name="" price=""/>
     </React.Fragment>
   );
 }
